@@ -1,0 +1,2 @@
+vercel app : https://angular-test-gilt.vercel.app/
+github : https://github.com/ajikur2901/angular_test
