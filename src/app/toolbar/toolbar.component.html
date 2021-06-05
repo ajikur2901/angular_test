@@ -1,0 +1,20 @@
+<mat-toolbar>
+    <mat-toolbar-row>
+        <span class="spacer"></span>
+        <mat-form-field>
+            <mat-label>Search</mat-label>
+            <input matInput (keyup)="onSearch($event)" value="{{searchVal}}"/>
+        </mat-form-field>
+        <button mat-button class="btn-all-title" (click)="resetSearch()">All Titles</button>
+    </mat-toolbar-row>
+    <mat-toolbar-row>
+        <div *ngFor="let certifier of certifiers">
+            <div 
+                class="category-item {{certifierSelected === certifier ? 'selected' : ''}}"
+                (click)="selectCategory(certifier)"
+            >
+                {{certifier}}
+            </div>
+        </div>
+    </mat-toolbar-row>
+</mat-toolbar>

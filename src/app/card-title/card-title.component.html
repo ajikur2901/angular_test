@@ -1,0 +1,34 @@
+<mat-grid-list cols="8" rowHeight="220" gutterSize="20">
+    <div *ngFor="let product of products">
+        <div *ngIf="product.show === true">
+            <mat-grid-tile >
+                <mat-card class="card">
+                    <mat-card-title>{{product.short_name}}</mat-card-title>
+                    <hr>
+                    <mat-card-subtitle>{{product.long_name}}</mat-card-subtitle>
+                    <mat-card-subtitle>
+                        LEVEL {{product.rncp_level}}
+                    </mat-card-subtitle>
+                    <mat-card-subtitle>
+                        {{product.certifier !== null ? product.certifier.short_name : 'null'}}
+                    </mat-card-subtitle>
+                    <mat-card-subtitle>
+                        <mat-icon class="publised-icon {{product.is_published ? 'on' : 'off'}}">lens</mat-icon>
+                    </mat-card-subtitle>
+                </mat-card>
+            </mat-grid-tile>
+        </div>
+    </div>
+    <!-- 
+        certifier: {
+            short_name: "INSTA"
+            _id: "5b3cdb6476a39548534c757a"
+        }
+        is_published: true
+        long_name: "Analyste en génie informatique et réseaux"
+        rncp_level: "6"
+        rncp_level_europe: "6"
+        short_name: "S-AGIR GL 2021"
+        _id: "5f2dbb36a7a47d1591ca15ff"
+     -->
+</mat-grid-list>

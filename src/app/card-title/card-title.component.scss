@@ -1,0 +1,16 @@
+.card {
+    text-align: center;
+    flex-grow: 1;
+}
+
+.card:hover {
+    background-color: orange;
+}
+
+.publised-icon.on {
+    color: green;
+}
+
+.publised-icon.off {
+    color: red;
+}
